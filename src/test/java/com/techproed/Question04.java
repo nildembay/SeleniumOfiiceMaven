@@ -9,7 +9,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class Questions04 {
+/*
+www.bestbuy.com'a gidin
+ Sayfa başlığının “Best” içerdiğini(contains) doğrulayın
+ logoTest => BestBuy logosunun görüntülenip görüntülenmediğini doğrulayın
+  mexicoLinkTest => Linkin görüntülenip görüntülenmediğini doğrulayın
+ */
+
+public class Question04 {
     static WebDriver driver;
     @BeforeClass
     public static void setUp() {
@@ -32,7 +39,7 @@ public class Questions04 {
 
     @AfterClass
     public static void tearDown(){
-        driver.quit();
+       // driver.quit();
     }
 
 }

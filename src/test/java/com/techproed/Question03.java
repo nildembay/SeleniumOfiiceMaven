@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 // 1. Amazon.com'a gidelim.
@@ -37,6 +38,12 @@ public class Question03 {
         WebElement dropdown= driver.findElement(By.id("searchDropdownBox"));
         Select select=new Select(dropdown);
         select.selectByValue("search-alias=stripbooks-intl-ship");
+
+        List<WebElement> list=select.getOptions();
+        for (WebElement w:list) {
+            System.out.println(w.getText());
+        }
+
         WebElement searchBox=driver.findElement(By.id("twotabsearchtextbox"));
         searchBox.sendKeys("Les Miserables"+ Keys.ENTER);
 
